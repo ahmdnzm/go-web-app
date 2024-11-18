@@ -80,9 +80,10 @@ jobs:
     needs: push
 
     steps:
-    - name: Checkout repository
+    - name: Checkout go-web-app-devops repository
       uses: actions/checkout@v4
       with:
+        repository: ahmdnzm/go-web-app-devops
         token: ${{ secrets.TOKEN }}
 
     - name: Update tag in Helm chart
